@@ -1,11 +1,11 @@
 # mybatis学习笔记
 
 ## 目录
-1. [mybatis入门](#一、mybatis入门)
-2. [自定义mybatis框架](#二、自定义mybatis框架)
-3. [使用mybatis进行CURD](#三、使用mybatis进行CURD)
+1. [mybatis入门](#mybatis入门)
+2. [自定义mybatis框架](#自定义mybatis框架)
+3. [使用mybatis进行CURD](#使用mybatis进行CURD)
 
-##  一、mybatis入门
+##  mybatis入门
 * mybatis的环境搭配
 	* 第一步：创建maven工程并导入依赖（主要是mybatis和Mysql连接）
 	* 第二步：创建实体类和dao接口
@@ -37,7 +37,7 @@
 	* 明确：
 		我们在实际开发中，都是越简便越好，所以都是采用不写dao实现类的方式。不管使用XML还是注解配置。但是Mybatis它是支持写dao实现类的。
 
-## 二、自定义mybatis框架
+## 自定义mybatis框架
 * 前提知识：反射、xml基础及解析、注解、JDBC、代理
 * 分析（这里仅仅以简单的查询所有和Select注解为例，是简化版mybatis，实际的要麻烦的多）：
 	* 按照JDBC的流程，我们要想处理一个查询需要的步骤（这里将以下所有步骤看作一个selectList方法）：
@@ -92,7 +92,7 @@
 		1. 创建代理对象（即通过xml或注解解析获得三要素：SQL,返回值类型，要执行的类方法的全限定名。然后通过反射、代理等创建dao接口的代理对象，可以理解为是实现类）
 		2. 用过上诉实现类，调用查询所有（经过代理增强后，所有调用的方法都会被代理的invoke拦截，然后根据不同的调用者及方法识别出对应的SQL语句，返回类型等）
 				
-## 三、使用mybatis进行CURD
+## 使用mybatis进行CURD
 * 基本步骤
 	1. 编写UserDao接口，以及方法
 	2. 在SqlMapConfig.xml主配置文件中添加对应映射
@@ -155,7 +155,7 @@
 
 * 关于实体类属性和数据库列名不一致的解决方案
 	* 方案一：通过使用别名，在SQL语句层面解决问题【运行效率高，但是开发效率慢】
-	* 方案二：使用配置文件【因为还要解析所以运行效率慢，但是开发效率高】
+	* 方案二：使用配置文件【因为要多解析xml所以运行效率慢，但是开发效率高】
 		```xml
 		<!-- 配置 查询结果的列名和实体类的属性名的对应关系 -->
 	    <!-- id是配置映射关系的标识，type是说明属于哪个实体类的映射 -->
@@ -168,7 +168,7 @@
 	        <result property="userSex" column="sex"/>
 	        <result property="userBirthday" column="birthday"/>
 	    </resultMap>
-		
+		<!-- 注意：使用映射配置后，需要改一下select标签中的原属性resultType为resultMap，值是配置映射的id -->
 	    <select id="findAll" resultMap="userMap">
 	        select * from user
 	    </select>
