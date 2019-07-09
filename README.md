@@ -1,8 +1,9 @@
 # mybatis学习笔记
 
 ## 目录
-1. mybatis入门
-2. 自定义mybatis框架
+1. [mybatis入门](#一、mybatis入门)
+2. [自定义mybatis框架](#二、自定义mybatis框架)
+3. [使用mybatis进行CURD](#三、使用mybatis进行CURD)
 
 ##  一、mybatis入门
 * mybatis的环境搭配
@@ -60,7 +61,7 @@
 				...
 				// 将对象添加到List中
 				list.add(element);
-			
+			}
 			```
 	* 那么要想执行成功上诉方法，就需要给它2个信息：
 		1. 连接数据库的连接信息
@@ -91,6 +92,84 @@
 		1. 创建代理对象（即通过xml或注解解析获得三要素：SQL,返回值类型，要执行的类方法的全限定名。然后通过反射、代理等创建dao接口的代理对象，可以理解为是实现类）
 		2. 用过上诉实现类，调用查询所有（经过代理增强后，所有调用的方法都会被代理的invoke拦截，然后根据不同的调用者及方法识别出对应的SQL语句，返回类型等）
 				
-			
-			
-			 
+## 三、使用mybatis进行CURD
+* 基本步骤
+	1. 编写UserDao接口，以及方法
+	2. 在SqlMapConfig.xml主配置文件中添加对应映射
+	3. 在对应映射xml中进行填写
+		* 如果有返回值使用：resultType属性（全限定类名）
+		* 如果有参数使用：parameterType属性（全限定类名）
+		* SQL语句中，如果有参数。使用#{value}的语法来写，其中value当：
+			1. 取于类对象的时候，直接填属性名，如User中的username
+			2. 如果参数是基本数据类型或者包装类parameterType属性中可以直接写String或java.lang.String都可以
+			3. 如果只有一个参数，且是基本数据类型，value可以写成随意，如id，uid都可以
+	4. 例子
+	```xml
+	<select id="findUserById" parameterType="Integer" resultType="com.mybatis.domain.User">
+        select * from user where id = #{uid}
+    </select>
+	```
+
+* 模糊查询
+	* 方式一（采用字符串拼接方式）
+	```xml
+	<select id="findUserByName" parameterType="string" resultType="com.mybatis.domain.User">
+        select * from user where username like '%${value}%'
+    </select>
+	```
+	```java
+	List<User> userList = userDao.findUserByName("王");
+	```
+	* 方式二（推荐：采用占位符，即perparedStatement形式）
+	```xml
+	<select id="findUserByName" parameterType="string" resultType="com.mybatis.domain.User">
+        select * from user where username like #{value}
+    </select>
+	```
+	```java
+	List<User> userList = userDao.findUserByName("%王%");
+	```
+	
+* 使用实体包装类作为参数（类似二级调用，使用.来操作）
+	```xml
+	 <select id="findUserByCard" parameterType="com.mybatis.domain.Card" resultType="com.mybatis.domain.User">
+        select * from user where username like #{user.username}
+    </select>
+	```
+	```java
+	public class Card {
+    	private User user;
+	}
+	```
+
+* 获取添加后数据的Id值（相当于执行完查询后，再次调用一个查询函数，并将结果追加到第一次返回的结果实体类中）
+	```xml
+	<insert id="saveUser" parameterType="com.mybatis.domain.User">
+		<!-- 这里注意：keyProperty对应实体类的Id，keyColumn对应数据库Id，order执行时机-->
+        <selectKey keyProperty="id" keyColumn="id" resultType="int" order="AFTER">
+            select last_insert_id()
+        </selectKey>
+        insert into user (username,sex,address,birthday) values (#{username},#{sex},#{address},#{birthday})
+    </insert>
+	```
+
+* 关于实体类属性和数据库列名不一致的解决方案
+	* 方案一：通过使用别名，在SQL语句层面解决问题【运行效率高，但是开发效率慢】
+	* 方案二：使用配置文件【因为还要解析所以运行效率慢，但是开发效率高】
+		```xml
+		<!-- 配置 查询结果的列名和实体类的属性名的对应关系 -->
+	    <!-- id是配置映射关系的标识，type是说明属于哪个实体类的映射 -->
+	    <resultMap id="userMap" type="com.mybatis.domain.User">
+	        <!-- 主键字段的对应，其中property为实体类中的属性名，column为数据库中的列名 -->
+	        <id property="userId" column="id"/>
+	        <!-- 非主键字段的对应 -->
+	        <result property="userName" column="username"/>
+	        <result property="userAddress" column="address"/>
+	        <result property="userSex" column="sex"/>
+	        <result property="userBirthday" column="birthday"/>
+	    </resultMap>
+		
+	    <select id="findAll" resultMap="userMap">
+	        select * from user
+	    </select>
+		```

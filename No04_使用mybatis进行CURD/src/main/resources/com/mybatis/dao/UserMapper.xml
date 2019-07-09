@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mybatis.dao.UserDao">
+
+    <!-- 配置 查询结果的列名和实体类的属性名的对应关系 -->
+    <!-- id是配置映射关系的标识，type是说明属于哪个实体类的映射 -->
+    <resultMap id="userMap" type="com.mybatis.domain.User">
+        <!-- 主键字段的对应，其中property为实体类中的属性名，column为数据库中的列名 -->
+        <id property="userId" column="id"/>
+        <!-- 非主键字段的对应 -->
+        <result property="userName" column="username"/>
+        <result property="userAddress" column="address"/>
+        <result property="userSex" column="sex"/>
+        <result property="userBirthday" column="birthday"/>
+    </resultMap>
+    <!-- 注意：使用映射配置后，需要改一下select标签中的原属性resultType为resultMap，值是配置映射的id -->
+    <select id="findAll" resultMap="userMap">
+        select * from user
+    </select>
+
+    <!-- parameterType 说明参数类型，是全限定类名。如果是基本类型或包装类可以直接写，如String，Integer -->
+    <insert id="saveUser" parameterType="com.mybatis.domain.User">
+        <!-- 这里注意：keyProperty对应实体类的Id，keyColumn对应数据库Id，order执行时机-->
+        <selectKey keyProperty="id" keyColumn="id" resultType="int" order="AFTER">
+            select last_insert_id()
+        </selectKey>
+        <!-- 这里要注意，用#{xxx}直接写 -->
+        insert into user (username,sex,address,birthday) values (#{username},#{sex},#{address},#{birthday})
+    </insert>
+
+    <!-- 当参数只有一个基本数据类型的时候value名称可以随便写 -->
+    <delete id="deleteUser" parameterType="Integer">
+        delete from user where id = #{value}
+    </delete>
+
+    <update id="updateUser" parameterType="com.mybatis.domain.User">
+        update user set address = #{address} where username = #{username}
+    </update>
+
+    <select id="findUserById" parameterType="Integer" resultType="com.mybatis.domain.User">
+        select * from user where id = #{uid}
+    </select>
+
+    <select id="findUserByName" parameterType="string" resultType="com.mybatis.domain.User">
+        <!-- select * from user where username like '%${value}%' -->
+        select * from user where username like #{value}
+    </select>
+
+    <select id="getTotol" resultType="int">
+        select count(*) from user
+    </select>
+
+    <select id="findUserByCard" parameterType="com.mybatis.domain.Card" resultType="com.mybatis.domain.User">
+        select * from user where username like #{user.username}
+    </select>
+</mapper>
