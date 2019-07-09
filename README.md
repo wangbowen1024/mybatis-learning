@@ -4,6 +4,7 @@
 1. [mybatis入门](#mybatis入门)
 2. [自定义mybatis框架](#自定义mybatis框架)
 3. [使用mybatis进行CURD](#使用mybatis进行CURD)
+4. [标签拓展](#标签拓展)
 
 ##  mybatis入门
 * mybatis的环境搭配
@@ -173,3 +174,80 @@
 	        select * from user
 	    </select>
 		```
+
+## 标签拓展
+* properties
+	* 使用该标签可以将配置信息单独写到一个文件中
+	* 引用资源后，直接在xml中使用${xxx}来使用
+	* 其中有2种方式引用：resource和url
+	```xml
+	<configuration>
+	    <!-- 配置properties
+	            可以在标签内部配置连接数据库的信息。也可以通过属性引用外部配置文件信息
+	            resource属性： 常用的
+	                用于指定配置文件的位置，是按照类路径的写法来写，并且必须存在于类路径下。
+	            url属性：
+	                是要求按照Url的写法来写地址
+	                URL：Uniform Resource Locator 统一资源定位符。它是可以唯一标识一个资源的位置。
+	                它的写法：
+	                    http://localhost:8080/mybatisserver/demo1Servlet
+	                    协议      主机     端口       URI
+	
+	                URI:Uniform Resource Identifier 统一资源标识符。它是在应用中可以唯一定位一个资源的。
+	    -->
+		<!-- 使用resource属性 -->
+	    <!--<properties resource="jdbcConfig.properties"/>-->
+
+		<!-- 使用url属性 -->
+	    <properties url="file:///D:/IDEA_Project/mybatis-learning/No04_%E4%BD%BF%E7%94%A8mybatis%E8%BF%9B%E8%A1%8CCURD/src/main/resources/jdbcConfig.properties"/>
+	
+	    <environments default="mysql">
+	        <environment id="mysql">
+	            <transactionManager type="JDBC"/>
+	            <dataSource type="POOLED">
+					<!-- 这里直接使用${xxx}调用 -->
+	                <property name="driver" value="${jdbc.driver}"/>
+	                <property name="url" value="${jdbc.url}"/>
+	                <property name="username" value="${jdbc.username}"/>
+	                <property name="password" value="${jdbc.password}"/>
+	            </dataSource>
+	        </environment>
+	    </environments>
+	
+	    <mappers>
+	        <mapper resource="com/mybatis/dao/UserMapper.xml"/>
+	    </mappers>
+	</configuration>
+	```
+
+	外部文件：jdbcConfig.properties
+	```xml
+	jdbc.driver=com.mysql.jdbc.Driver
+	jdbc.url=jdbc:mysql://localhost:3306/mybatis
+	jdbc.username=root
+	jdbc.password=Bow1024
+	```
+* typeAliases
+	* 还记得之前哪个基本数据类型为什么不用写全限定类名吗？就是使用了这个标签（起别名）
+	* typeAlias 和 package
+	```xml
+	<!--使用typeAliases配置别名，它只能配置domain中类的别名 -->
+    <typeAliases>
+        <!--typeAlias用于配置别名。type属性指定的是实体类全限定类名。alias属性指定别名，当指定了别名就再区分大小写 
+        <typeAlias type="com.itheima.domain.User" alias="user"></typeAlias>-->
+
+        <!-- 用于指定要配置别名的包，当指定之后，该包下的实体类都会注册别名，并且类名就是别名，不再区分大小写-->
+        <package name="com.itheima.domain"></package>
+    </typeAliases> 
+	```
+* mappers标签中的package
+	```xml
+	<mappers>
+        <!--<mapper resource="com/mybatis/dao/UserMapper.xml"/>-->
+        
+        <!-- package标签是用于指定dao接口所在的包,当指定了之后就不需要在写mapper以及resource或者class了 -->
+        <package name="com.mybatis.dao"/>
+    </mappers>
+	```
+	* 如果报错：org.apache.ibatis.binding.BindingException: Invalid bound statement (not found)
+		这是一个很容易忽视的点，记住：接口名与Mybatis的映射文件名一定要一模一样。

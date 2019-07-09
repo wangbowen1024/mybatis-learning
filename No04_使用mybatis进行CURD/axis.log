@@ -165,3 +165,343 @@
 2019-07-09 16:31:12,144 2629   [           main] DEBUG dao.UserDao.saveUser!selectKey  - ==> Parameters: 
 2019-07-09 16:31:12,214 2699   [           main] DEBUG dao.UserDao.saveUser!selectKey  - <==      Total: 1
 2019-07-09 16:31:12,215 2700   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Committing JDBC Connection [com.mysql.jdbc.JDBC4Connection@43a0cee9]
+2019-07-09 20:00:51,835 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2019-07-09 20:00:52,647 812    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 20:00:52,647 812    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 20:00:52,647 812    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 20:00:52,647 812    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 20:00:53,165 1330   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2019-07-09 20:01:12,805 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2019-07-09 20:01:12,985 180    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 20:01:12,985 180    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 20:01:12,986 181    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 20:01:12,986 181    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 20:01:13,134 329    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2019-07-09 20:01:35,658 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2019-07-09 20:01:35,848 190    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 20:01:35,848 190    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 20:01:35,848 190    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 20:01:35,848 190    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 20:01:35,983 325    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2019-07-09 20:01:36,471 813    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1415157681.
+2019-07-09 20:01:36,471 813    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@545997b1]
+2019-07-09 20:01:36,474 816    [           main] DEBUG tis.dao.UserDao.findUserByName  - ==>  Preparing: select * from user where username like ? 
+2019-07-09 20:01:36,501 843    [           main] DEBUG tis.dao.UserDao.findUserByName  - ==> Parameters: %王%(String)
+2019-07-09 20:01:36,712 1054   [           main] DEBUG tis.dao.UserDao.findUserByName  - <==      Total: 4
+2019-07-09 20:02:03,035 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2019-07-09 20:02:03,207 172    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 20:02:03,208 173    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 20:02:03,208 173    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 20:02:03,208 173    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 20:02:03,334 299    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2019-07-09 20:02:03,669 634    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1415157681.
+2019-07-09 20:02:03,669 634    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@545997b1]
+2019-07-09 20:02:03,673 638    [           main] DEBUG tis.dao.UserDao.findUserByName  - ==>  Preparing: select * from user where username like ? 
+2019-07-09 20:02:03,729 694    [           main] DEBUG tis.dao.UserDao.findUserByName  - ==> Parameters: %王%(String)
+2019-07-09 20:02:03,745 710    [           main] DEBUG tis.dao.UserDao.findUserByName  - <==      Total: 4
+2019-07-09 20:09:17,409 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2019-07-09 20:09:20,893 3484   [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 20:09:20,893 3484   [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 20:09:20,893 3484   [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 20:09:20,893 3484   [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 20:09:22,431 5022   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2019-07-09 20:09:25,350 7941   [           main] DEBUG source.pooled.PooledDataSource  - Created connection 811760110.
+2019-07-09 20:09:25,350 7941   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@306279ee]
+2019-07-09 20:09:25,353 7944   [           main] DEBUG tis.dao.UserDao.findUserByName  - ==>  Preparing: select * from user where username like ? 
+2019-07-09 20:09:25,382 7973   [           main] DEBUG tis.dao.UserDao.findUserByName  - ==> Parameters: %王%(String)
+2019-07-09 20:09:25,413 8004   [           main] DEBUG tis.dao.UserDao.findUserByName  - <==      Total: 4
+2019-07-09 21:10:06,962 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2019-07-09 21:10:17,673 10711  [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2019-07-09 21:10:17,673 10711  [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2019-07-09 21:10:17,674 10712  [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2019-07-09 21:10:17,674 10712  [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2019-07-09 21:10:17,675 10713  [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2019-07-09 21:10:17,675 10713  [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain
+2019-07-09 21:10:17,707 10745  [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain
+2019-07-09 21:10:19,593 12631  [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: Card.class
+2019-07-09 21:10:19,593 12631  [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: User.class
+2019-07-09 21:10:19,594 12632  [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain
+2019-07-09 21:10:19,594 12632  [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain/Card.class
+2019-07-09 21:10:19,594 12632  [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain/Card.class
+2019-07-09 21:10:19,595 12633  [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   1 
+2019-07-09 21:10:19,596 12634  [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain/User.class
+2019-07-09 21:10:19,596 12634  [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain/User.class
+2019-07-09 21:10:19,651 12689  [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   1 L
+2019-07-09 21:10:19,652 12690  [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.mybatis.domain.Card matches criteria [is assignable to Object]
+2019-07-09 21:10:19,653 12691  [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.mybatis.domain.User matches criteria [is assignable to Object]
+2019-07-09 21:10:21,194 14232  [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 21:10:21,194 14232  [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 21:10:21,194 14232  [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 21:10:21,194 14232  [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 21:10:21,253 14291  [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao
+2019-07-09 21:10:21,254 14292  [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao
+2019-07-09 21:10:21,254 14292  [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: UserDao.class
+2019-07-09 21:10:21,255 14293  [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: UserMapper.xml
+2019-07-09 21:10:21,255 14293  [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao
+2019-07-09 21:10:21,255 14293  [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao/UserDao.class
+2019-07-09 21:10:21,255 14293  [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao/UserDao.class
+2019-07-09 21:10:21,256 14294  [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   1    saveUser (Lcom/mybatis/domain/User;)V 
+2019-07-09 21:10:21,256 14294  [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao/UserMapper.xml
+2019-07-09 21:10:21,256 14294  [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao/UserMapper.xml
+2019-07-09 21:10:21,571 14609  [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: <?xml version="1.0" encoding="UTF-8"?>
+2019-07-09 21:10:21,571 14609  [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.mybatis.dao.UserDao matches criteria [is assignable to Object]
+2019-07-09 21:11:58,724 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2019-07-09 21:11:58,846 122    [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2019-07-09 21:11:58,847 123    [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2019-07-09 21:11:58,847 123    [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2019-07-09 21:11:58,848 124    [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2019-07-09 21:11:58,849 125    [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2019-07-09 21:11:58,849 125    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain
+2019-07-09 21:11:58,850 126    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain
+2019-07-09 21:11:58,915 191    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: Card.class
+2019-07-09 21:11:58,915 191    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: User.class
+2019-07-09 21:11:58,915 191    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain
+2019-07-09 21:11:58,916 192    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain/Card.class
+2019-07-09 21:11:58,916 192    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain/Card.class
+2019-07-09 21:11:58,917 193    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   1 
+2019-07-09 21:11:58,918 194    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain/User.class
+2019-07-09 21:11:58,918 194    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain/User.class
+2019-07-09 21:11:58,920 196    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   1 L
+2019-07-09 21:11:58,920 196    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.mybatis.domain.Card matches criteria [is assignable to Object]
+2019-07-09 21:11:58,923 199    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.mybatis.domain.User matches criteria [is assignable to Object]
+2019-07-09 21:11:58,992 268    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 21:11:58,992 268    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 21:11:58,992 268    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 21:11:58,992 268    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 21:11:58,995 271    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao
+2019-07-09 21:11:58,996 272    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao
+2019-07-09 21:11:58,997 273    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: UserDao.class
+2019-07-09 21:11:58,997 273    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: UserMapper.xml
+2019-07-09 21:11:58,997 273    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao
+2019-07-09 21:11:58,997 273    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao/UserDao.class
+2019-07-09 21:11:58,997 273    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao/UserDao.class
+2019-07-09 21:11:58,998 274    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   1    saveUser (Lcom/mybatis/domain/User;)V 
+2019-07-09 21:11:59,001 277    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao/UserMapper.xml
+2019-07-09 21:11:59,002 278    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao/UserMapper.xml
+2019-07-09 21:11:59,004 280    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: <?xml version="1.0" encoding="UTF-8"?>
+2019-07-09 21:11:59,004 280    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.mybatis.dao.UserDao matches criteria [is assignable to Object]
+2019-07-09 21:12:05,996 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2019-07-09 21:12:06,137 141    [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2019-07-09 21:12:06,137 141    [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2019-07-09 21:12:06,138 142    [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2019-07-09 21:12:06,140 144    [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2019-07-09 21:12:06,141 145    [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2019-07-09 21:12:06,141 145    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain
+2019-07-09 21:12:06,141 145    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain
+2019-07-09 21:12:06,180 184    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: Card.class
+2019-07-09 21:12:06,181 185    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: User.class
+2019-07-09 21:12:06,181 185    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain
+2019-07-09 21:12:06,181 185    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain/Card.class
+2019-07-09 21:12:06,181 185    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain/Card.class
+2019-07-09 21:12:06,182 186    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   1 
+2019-07-09 21:12:06,182 186    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain/User.class
+2019-07-09 21:12:06,183 187    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain/User.class
+2019-07-09 21:12:06,183 187    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   1 L
+2019-07-09 21:12:06,184 188    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.mybatis.domain.Card matches criteria [is assignable to Object]
+2019-07-09 21:12:06,184 188    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.mybatis.domain.User matches criteria [is assignable to Object]
+2019-07-09 21:12:06,229 233    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 21:12:06,230 234    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 21:12:06,230 234    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 21:12:06,230 234    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 21:12:06,236 240    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao
+2019-07-09 21:12:06,236 240    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao
+2019-07-09 21:12:06,237 241    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: UserDao.class
+2019-07-09 21:12:06,237 241    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: UserMapper.xml
+2019-07-09 21:12:06,238 242    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao
+2019-07-09 21:12:06,238 242    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao/UserDao.class
+2019-07-09 21:12:06,238 242    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao/UserDao.class
+2019-07-09 21:12:06,239 243    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   1    saveUser (Lcom/mybatis/domain/User;)V 
+2019-07-09 21:12:06,239 243    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao/UserMapper.xml
+2019-07-09 21:12:06,240 244    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao/UserMapper.xml
+2019-07-09 21:12:06,241 245    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: <?xml version="1.0" encoding="UTF-8"?>
+2019-07-09 21:12:06,241 245    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.mybatis.dao.UserDao matches criteria [is assignable to Object]
+2019-07-09 21:15:08,588 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2019-07-09 21:15:08,707 119    [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2019-07-09 21:15:08,707 119    [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2019-07-09 21:15:08,708 120    [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2019-07-09 21:15:08,708 120    [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2019-07-09 21:15:08,709 121    [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2019-07-09 21:15:08,710 122    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain
+2019-07-09 21:15:08,710 122    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain
+2019-07-09 21:15:08,759 171    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: Card.class
+2019-07-09 21:15:08,759 171    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: User.class
+2019-07-09 21:15:08,760 172    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain
+2019-07-09 21:15:08,760 172    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain/Card.class
+2019-07-09 21:15:08,760 172    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain/Card.class
+2019-07-09 21:15:08,763 175    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   1 
+2019-07-09 21:15:08,764 176    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain/User.class
+2019-07-09 21:15:08,764 176    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain/User.class
+2019-07-09 21:15:08,765 177    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   1 L
+2019-07-09 21:15:08,766 178    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.mybatis.domain.Card matches criteria [is assignable to Object]
+2019-07-09 21:15:08,767 179    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.mybatis.domain.User matches criteria [is assignable to Object]
+2019-07-09 21:15:08,806 218    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 21:15:08,807 219    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 21:15:08,807 219    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 21:15:08,807 219    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 21:15:09,175 587    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2019-07-09 21:15:09,911 1323   [           main] DEBUG source.pooled.PooledDataSource  - Created connection 802581203.
+2019-07-09 21:15:09,911 1323   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2fd66ad3]
+2019-07-09 21:15:09,917 1329   [           main] DEBUG tis.dao.UserDao.findUserByName  - ==>  Preparing: select * from user where username like ? 
+2019-07-09 21:15:09,944 1356   [           main] DEBUG tis.dao.UserDao.findUserByName  - ==> Parameters: %王%(String)
+2019-07-09 21:15:10,024 1436   [           main] DEBUG tis.dao.UserDao.findUserByName  - <==      Total: 4
+2019-07-09 21:18:03,764 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2019-07-09 21:18:03,953 189    [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2019-07-09 21:18:03,953 189    [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2019-07-09 21:18:03,956 192    [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2019-07-09 21:18:03,957 193    [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2019-07-09 21:18:03,958 194    [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2019-07-09 21:18:03,958 194    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain
+2019-07-09 21:18:03,959 195    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain
+2019-07-09 21:18:04,069 305    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: Card.class
+2019-07-09 21:18:04,069 305    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: User.class
+2019-07-09 21:18:04,070 306    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain
+2019-07-09 21:18:04,070 306    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain/Card.class
+2019-07-09 21:18:04,070 306    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain/Card.class
+2019-07-09 21:18:04,072 308    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   1 
+2019-07-09 21:18:04,072 308    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain/User.class
+2019-07-09 21:18:04,072 308    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain/User.class
+2019-07-09 21:18:04,073 309    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   1 L
+2019-07-09 21:18:04,074 310    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.mybatis.domain.Card matches criteria [is assignable to Object]
+2019-07-09 21:18:04,075 311    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.mybatis.domain.User matches criteria [is assignable to Object]
+2019-07-09 21:18:04,127 363    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 21:18:04,127 363    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 21:18:04,128 364    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 21:18:04,128 364    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 21:18:04,132 368    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao
+2019-07-09 21:18:04,132 368    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao
+2019-07-09 21:18:04,133 369    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: UserDao.class
+2019-07-09 21:18:04,134 370    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: UserMapper.xml
+2019-07-09 21:18:04,134 370    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao
+2019-07-09 21:18:04,134 370    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao/UserDao.class
+2019-07-09 21:18:04,134 370    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao/UserDao.class
+2019-07-09 21:18:04,136 372    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   1    saveUser (Lcom/mybatis/domain/User;)V 
+2019-07-09 21:18:04,136 372    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao/UserMapper.xml
+2019-07-09 21:18:04,136 372    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao/UserMapper.xml
+2019-07-09 21:18:04,137 373    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: <?xml version="1.0" encoding="UTF-8"?>
+2019-07-09 21:18:04,138 374    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.mybatis.dao.UserDao matches criteria [is assignable to Object]
+2019-07-09 21:19:36,815 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2019-07-09 21:19:37,025 210    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 21:19:37,025 210    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 21:19:37,025 210    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 21:19:37,025 210    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 21:19:37,033 218    [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2019-07-09 21:19:37,033 218    [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2019-07-09 21:19:37,034 219    [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2019-07-09 21:19:37,035 220    [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2019-07-09 21:19:37,036 221    [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2019-07-09 21:19:37,036 221    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao
+2019-07-09 21:19:37,036 221    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao
+2019-07-09 21:19:37,143 328    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: UserDao.class
+2019-07-09 21:19:37,144 329    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: UserMapper.xml
+2019-07-09 21:19:37,144 329    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao
+2019-07-09 21:19:37,144 329    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao/UserDao.class
+2019-07-09 21:19:37,145 330    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao/UserDao.class
+2019-07-09 21:19:37,146 331    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   1    saveUser (Lcom/mybatis/domain/User;)V 
+2019-07-09 21:19:37,147 332    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao/UserMapper.xml
+2019-07-09 21:19:37,147 332    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao/UserMapper.xml
+2019-07-09 21:19:37,148 333    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: <?xml version="1.0" encoding="UTF-8"?>
+2019-07-09 21:19:37,149 334    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.mybatis.dao.UserDao matches criteria [is assignable to Object]
+2019-07-09 21:19:39,728 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2019-07-09 21:19:39,921 193    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 21:19:39,921 193    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 21:19:39,922 194    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 21:19:39,922 194    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 21:19:39,928 200    [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2019-07-09 21:19:39,928 200    [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2019-07-09 21:19:39,929 201    [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2019-07-09 21:19:39,930 202    [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2019-07-09 21:19:39,930 202    [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2019-07-09 21:19:39,931 203    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao
+2019-07-09 21:19:39,931 203    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao
+2019-07-09 21:19:39,975 247    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: UserDao.class
+2019-07-09 21:19:39,975 247    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: UserMapper.xml
+2019-07-09 21:19:39,975 247    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao
+2019-07-09 21:19:39,975 247    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao/UserDao.class
+2019-07-09 21:19:39,976 248    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao/UserDao.class
+2019-07-09 21:19:39,977 249    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   1    saveUser (Lcom/mybatis/domain/User;)V 
+2019-07-09 21:19:39,977 249    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao/UserMapper.xml
+2019-07-09 21:19:39,977 249    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao/UserMapper.xml
+2019-07-09 21:19:39,978 250    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: <?xml version="1.0" encoding="UTF-8"?>
+2019-07-09 21:19:39,978 250    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.mybatis.dao.UserDao matches criteria [is assignable to Object]
+2019-07-09 21:23:19,508 1      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2019-07-09 21:23:19,643 136    [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2019-07-09 21:23:19,643 136    [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2019-07-09 21:23:19,644 137    [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2019-07-09 21:23:19,645 138    [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2019-07-09 21:23:19,645 138    [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2019-07-09 21:23:19,646 139    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain
+2019-07-09 21:23:19,646 139    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain
+2019-07-09 21:23:19,702 195    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: Card.class
+2019-07-09 21:23:19,702 195    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: User.class
+2019-07-09 21:23:19,703 196    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain
+2019-07-09 21:23:19,703 196    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain/Card.class
+2019-07-09 21:23:19,703 196    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain/Card.class
+2019-07-09 21:23:19,704 197    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   1 
+2019-07-09 21:23:19,704 197    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain/User.class
+2019-07-09 21:23:19,704 197    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain/User.class
+2019-07-09 21:23:19,705 198    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   1 L
+2019-07-09 21:23:19,707 200    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.mybatis.domain.Card matches criteria [is assignable to Object]
+2019-07-09 21:23:19,707 200    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.mybatis.domain.User matches criteria [is assignable to Object]
+2019-07-09 21:23:19,769 262    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 21:23:19,769 262    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 21:23:19,770 263    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 21:23:19,770 263    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 21:23:19,773 266    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao
+2019-07-09 21:23:19,776 269    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao
+2019-07-09 21:23:19,780 273    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: UserDao.class
+2019-07-09 21:23:19,780 273    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: UserDao.xml
+2019-07-09 21:23:19,780 273    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao
+2019-07-09 21:23:19,781 274    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao/UserDao.class
+2019-07-09 21:23:19,781 274    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao/UserDao.class
+2019-07-09 21:23:19,781 274    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   1    saveUser (Lcom/mybatis/domain/User;)V 
+2019-07-09 21:23:19,782 275    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao/UserDao.xml
+2019-07-09 21:23:19,782 275    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao/UserDao.xml
+2019-07-09 21:23:19,783 276    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: <?xml version="1.0" encoding="UTF-8"?>
+2019-07-09 21:23:19,783 276    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.mybatis.dao.UserDao matches criteria [is assignable to Object]
+2019-07-09 21:23:19,925 418    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2019-07-09 21:23:20,335 828    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 802581203.
+2019-07-09 21:23:20,335 828    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2fd66ad3]
+2019-07-09 21:23:20,338 831    [           main] DEBUG tis.dao.UserDao.findUserByName  - ==>  Preparing: select * from user where username like ? 
+2019-07-09 21:23:20,366 859    [           main] DEBUG tis.dao.UserDao.findUserByName  - ==> Parameters: %王%(String)
+2019-07-09 21:23:20,401 894    [           main] DEBUG tis.dao.UserDao.findUserByName  - <==      Total: 4
+2019-07-09 21:23:25,237 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2019-07-09 21:23:25,367 130    [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2019-07-09 21:23:25,368 131    [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2019-07-09 21:23:25,368 131    [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2019-07-09 21:23:25,369 132    [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2019-07-09 21:23:25,370 133    [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2019-07-09 21:23:25,370 133    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain
+2019-07-09 21:23:25,371 134    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain
+2019-07-09 21:23:25,420 183    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: Card.class
+2019-07-09 21:23:25,420 183    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: User.class
+2019-07-09 21:23:25,421 184    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain
+2019-07-09 21:23:25,421 184    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain/Card.class
+2019-07-09 21:23:25,421 184    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain/Card.class
+2019-07-09 21:23:25,422 185    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   1 
+2019-07-09 21:23:25,422 185    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain/User.class
+2019-07-09 21:23:25,422 185    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/domain/User.class
+2019-07-09 21:23:25,424 187    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   1 L
+2019-07-09 21:23:25,425 188    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.mybatis.domain.Card matches criteria [is assignable to Object]
+2019-07-09 21:23:25,430 193    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.mybatis.domain.User matches criteria [is assignable to Object]
+2019-07-09 21:23:25,486 249    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 21:23:25,486 249    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 21:23:25,486 249    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 21:23:25,486 249    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2019-07-09 21:23:25,494 257    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao
+2019-07-09 21:23:25,494 257    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao
+2019-07-09 21:23:25,495 258    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: UserDao.class
+2019-07-09 21:23:25,496 259    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: UserDao.xml
+2019-07-09 21:23:25,497 260    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao
+2019-07-09 21:23:25,498 261    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao/UserDao.class
+2019-07-09 21:23:25,498 261    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao/UserDao.class
+2019-07-09 21:23:25,500 263    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   1    saveUser (Lcom/mybatis/domain/User;)V 
+2019-07-09 21:23:25,500 263    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao/UserDao.xml
+2019-07-09 21:23:25,500 263    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/IDEA_Project/mybatis-learning/No04_%e4%bd%bf%e7%94%a8mybatis%e8%bf%9b%e8%a1%8cCURD/target/classes/com/mybatis/dao/UserDao.xml
+2019-07-09 21:23:25,501 264    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: <?xml version="1.0" encoding="UTF-8"?>
+2019-07-09 21:23:25,501 264    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.mybatis.dao.UserDao matches criteria [is assignable to Object]
+2019-07-09 21:23:25,641 404    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2019-07-09 21:23:26,000 763    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 802581203.
+2019-07-09 21:23:26,001 764    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2fd66ad3]
+2019-07-09 21:23:26,003 766    [           main] DEBUG batis.dao.UserDao.findUserById  - ==>  Preparing: select * from user where id = ? 
+2019-07-09 21:23:26,036 799    [           main] DEBUG batis.dao.UserDao.findUserById  - ==> Parameters: 41(Integer)
+2019-07-09 21:23:26,192 955    [           main] DEBUG batis.dao.UserDao.findUserById  - <==      Total: 1
