@@ -5,6 +5,9 @@
 2. [自定义mybatis框架](#自定义mybatis框架)
 3. [使用mybatis进行CURD](#使用mybatis进行CURD)
 4. [标签拓展](#标签拓展)
+5. [mybatis的连接池及事务](#mybatis的连接池及事务)
+6. [动态SQL](#动态SQL)
+7. [多表查询](#多表查询)
 
 ##  mybatis入门
 * mybatis的环境搭配
@@ -295,4 +298,70 @@
         </if>
     </where>
 </select>
+```
+
+## 多表查询
+学生类
+```java
+public class Student implements Serializable {
+    private int id;
+    private String name;
+    private int age;
+    /**
+     * 一个学生可以写多篇文章（即，一对多）
+     */
+    private List<Article> articles;
+}
+```
+文章类
+```java
+public class Article implements Serializable {
+    private int id;
+    private String title;
+    private int sid;
+    /**
+     * 一个文章的作者只能一个学生(即，一对一。多对一在Mybatis中也是看成一对一)
+     */
+    private Student student;
+}
+```
+* 一对多（collection）
+```xml
+<!-- 查询所有学生写的所有文章 -->
+<mapper namespace="com.mybatis.dao.StudentDao">
+    <resultMap id="resultStudentMap" type="Student">
+        <id column="sid" property="id"/>
+        <result property="name" column="sname"/>
+        <result property="age" column="age"/>
+        <collection property="articles" ofType="Article">
+            <id column="aid" property="id"/>
+            <result property="title" column="title"/>
+            <result property="sid" column="sid"/>
+        </collection>
+    </resultMap>
+
+    <select id="getArticlesByStudents" resultMap="resultStudentMap">
+        select * from student s left outer join article a on s.sid = a.sid
+    </select>
+</mapper>
+```
+* 一对一、多对一（association）
+```xml
+<!-- 查询每篇文章的作者信息 -->
+<mapper namespace="com.mybatis.dao.ArticleDao">
+    <resultMap id="resultArticleMap" type="Article">
+        <id column="aid" property="id"/>
+        <result property="title" column="title"/>
+        <result property="sid" column="sid"/>
+        <association property="student" javaType="Student">
+            <id column="sid" property="id"/>
+            <result property="name" column="sname"/>
+            <result property="age" column="age"/>
+        </association>
+    </resultMap>
+    
+    <select id="getArticlesInfo" resultMap="resultArticleMap">
+        select a.*,s.age,s.sname from article a join student s on s.sid = a.sid
+    </select>
+</mapper>
 ```
