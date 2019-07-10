@@ -251,3 +251,48 @@
 	```
 	* 如果报错：org.apache.ibatis.binding.BindingException: Invalid bound statement (not found)
 		这是一个很容易忽视的点，记住：接口名与Mybatis的映射文件名一定要一模一样。
+
+## mybatis的连接池及事务
+* mybatis有一套自己的连接池技术
+	* 当需要连接的时候，去池子里面找有没有空闲的。有的话直接拿，没有的话去活动线程池中查看是否已经达到线程数上上限。如果上限了，从活动线程池中取出最先使用的那个，进行清理操作，然后返回该连接。
+	* 在配置文件中 <dataSource type="xxx">取值有3种：
+		* POOLED：使用线程池（推荐）
+		* UNPOOLED：不适用线程池
+		* JNDI
+* 事务
+	* 自动提交事务设置，将参数设为true：sqlSession.openSession(true);
+
+## 动态SQL
+* if标签
+* where标签
+
+	多条件查询
+```xml
+<select id="findAll" parameterType="com.mybatis.domain.User" resultType="com.mybatis.domain.User">
+    select * from user
+    <where>
+        <if test="username != null">
+            and username like #{username}
+        </if>
+        <if test="sex != null">
+            and sex = #{sex}
+        </if>
+    </where>
+</select>
+```
+* foreach标签
+
+	集合遍历
+```xml
+<select id="findUserByIds" parameterType="com.mybatis.domain.Card" resultType="com.mybatis.domain.User">
+    select * from user
+    <where>
+        <if test="ids != null">
+            <!-- 从collection里遍历，每个对象为item,并用separator分隔，最后放在open和close之间 -->
+            <foreach collection="ids" open="id in (" close=")" item="id" separator=",">
+                #{id}
+            </foreach>
+        </if>
+    </where>
+</select>
+```

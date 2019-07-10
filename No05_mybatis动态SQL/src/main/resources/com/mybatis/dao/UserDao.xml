@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mybatis.dao.UserDao">
+
+    <select id="findAll" parameterType="com.mybatis.domain.User" resultType="com.mybatis.domain.User">
+        select * from user
+        <where>
+            <if test="username != null">
+                and username like #{username}
+            </if>
+            <if test="sex != null">
+                and sex = #{sex}
+            </if>
+        </where>
+    </select>
+
+    <select id="findUserByIds" parameterType="com.mybatis.domain.Card" resultType="com.mybatis.domain.User">
+        select * from user
+        <where>
+            <if test="ids != null">
+                <!-- 从collection里遍历，每个对象为item,并用separator分隔，最后放在open和close之间 -->
+                <foreach collection="ids" open="id in (" close=")" item="id" separator=",">
+                    #{id}
+                </foreach>
+            </if>
+        </where>
+    </select>
+</mapper>
