@@ -8,6 +8,7 @@
 5. [mybatis的连接池及事务](#mybatis的连接池及事务)
 6. [动态SQL](#动态SQL)
 7. [多表查询](#多表查询)
+8. [缓存](#缓存)
 
 ##  mybatis入门
 * mybatis的环境搭配
@@ -365,3 +366,35 @@ public class Article implements Serializable {
     </select>
 </mapper>
 ```
+
+## 缓存
+* 缓存使用场景：当经常查询、不经常改变、对结果影响不大的时候使用
+* 一级缓存
+	* mybatis默认开启
+	```xml
+	<settings>
+        <setting name="cacheEnabled" value="true"/>
+    </settings>
+	```
+	* 是伴随着SqlSession的生命周期
+	* 当SqlSessioni调用close或cleanCache，或者进行增删改操作的时候，会清空缓存
+* 二级缓存
+	* mybatis中的二级缓存是mapper级别的缓存，值得注意的是，不同的mapper通常情况下有不同的namespace，就都有一个二级缓存，也就是说，不同的mapper之间的二级缓存是互不影响的
+	* 开启二级缓存
+	SqlMapConfig.xml
+	```xml
+	<settings>
+        <setting name="cacheEnabled" value="true"/>
+    </settings>
+	```
+	StudentDao.xml
+	```xml
+	<!-- 开启缓存 -->
+	<cache/>
+	```
+	```xml
+	<!-- useCache 开启/禁用缓存 -->
+	<select id="findById" resultMap="resultStudentMap" parameterType="int" useCache="true">
+        select * from student where sid = #{id}
+    </select>
+	```

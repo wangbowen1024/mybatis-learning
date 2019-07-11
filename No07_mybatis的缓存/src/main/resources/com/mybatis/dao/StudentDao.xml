@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mybatis.dao.StudentDao">
+    <cache/>
+
+    <resultMap id="resultStudentMap" type="Student">
+        <id column="sid" property="id"/>
+        <result property="name" column="sname"/>
+        <result property="age" column="age"/>
+    </resultMap>
+
+    <select id="findById" resultMap="resultStudentMap" parameterType="int" useCache="true">
+        select * from student where sid = #{id}
+    </select>
+
+    <update id="updateStudent" parameterType="student">
+        update student set age = 20 where sid = #{id}
+    </update>
+
+
+</mapper>
