@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mybatis.dao.ArticleDao">
+    <resultMap id="resultArticleMap" type="Article">
+        <id column="aid" property="id"/>
+        <result property="title" column="title"/>
+        <result property="sid" column="sid"/>
+        <!--
+         select 属性：根据学生的唯一标识查询学生（即，根据property对象主键的查询方法）
+         column 属性：从表中的外键
+         -->
+        <association property="student" javaType="Student" select="com.mybatis.dao.StudentDao.findById" column="sid"/>
+    </resultMap>
+    
+    <select id="getArticlesInfo" resultMap="resultArticleMap">
+        select * from article
+    </select>
+
+    <select id="findById" parameterType="int" resultMap="resultArticleMap">
+        select * from article where aid = #{id}
+    </select>
+
+</mapper>

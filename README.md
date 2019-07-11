@@ -9,6 +9,7 @@
 6. [动态SQL](#动态SQL)
 7. [多表查询](#多表查询)
 8. [缓存](#缓存)
+9. [延迟加载](#延迟加载)
 
 ##  mybatis入门
 * mybatis的环境搭配
@@ -398,3 +399,72 @@ public class Article implements Serializable {
         select * from student where sid = #{id}
     </select>
 	```
+
+## 延迟加载
+* 使用场景
+	* 一对一、多对一：立即加载
+	* 多对一、多对多：延迟加载
+* 立即加载：再多表查询的时候，如果在SQL语句中直接使用多表连接就是立即加载，如：
+	```xml
+	<select id="getArticlesInfo" resultMap="resultArticleMap">
+        select a.*,s.age,s.sname from article a join student s on s.sid = a.sid
+    </select>
+	```
+* 延迟加载：需要的时候再去查
+	* 使用方式
+	SqlMapConfig.xml
+	```xml
+	 <settings>
+        <!-- 开启Mybatis支持延迟加载 -->
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <setting name="aggressiveLazyLoading" value="false"/>
+    </settings>
+	```
+	StudentDao.xml
+	```xml
+	<mapper namespace="com.mybatis.dao.StudentDao">
+	    <resultMap id="resultStudentMap" type="Student">
+	        <id column="sid" property="id"/>
+	        <result property="name" column="sname"/>
+	        <result property="age" column="age"/>
+	
+	        <!--
+	         select 属性：根据文章的唯一标识查询文章（即，根据property对象主键的查询方法）
+	         column 属性：从表中的外键
+	         -->
+	        <collection property="articles" ofType="Article" select="com.mybatis.dao.ArticleDao.findById" column="sid"/>
+	    </resultMap>
+	
+	    <select id="getArticlesByStudents" resultMap="resultStudentMap">
+	        select * from student
+	    </select>
+	
+	    <select id="findById" parameterType="int" resultMap="resultStudentMap">
+	        select * from student where sid = #{id}
+	    </select>
+	</mapper>
+	```
+	ArticleDao.xml
+	```xml
+	<mapper namespace="com.mybatis.dao.ArticleDao">
+	    <resultMap id="resultArticleMap" type="Article">
+	        <id column="aid" property="id"/>
+	        <result property="title" column="title"/>
+	        <result property="sid" column="sid"/>
+	        <!--
+	         select 属性：根据学生的唯一标识查询学生（即，根据property对象主键的查询方法）
+	         column 属性：从表中的外键
+	         -->
+	        <association property="student" javaType="Student" select="com.mybatis.dao.StudentDao.findById" column="sid"/>
+	    </resultMap>
+	    
+	    <select id="getArticlesInfo" resultMap="resultArticleMap">
+	        select * from article
+	    </select>
+	
+	    <select id="findById" parameterType="int" resultMap="resultArticleMap">
+	        select * from article where aid = #{id}
+	    </select>
+	</mapper>
+	```
+	* 解析：就是将原来多表连接操作中t1 join t2 on xxx = yyy变成单独的两次查询t1和t2。然后需要添加两个分别用主键查询t1、t2的方法
