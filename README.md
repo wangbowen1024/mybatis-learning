@@ -10,6 +10,7 @@
 7. [多表查询](#多表查询)
 8. [缓存](#缓存)
 9. [延迟加载](#延迟加载)
+10. [注解开发](#mybatis注解开发)
 
 ##  mybatis入门
 * mybatis的环境搭配
@@ -429,8 +430,8 @@ public class Article implements Serializable {
 	        <result property="age" column="age"/>
 	
 	        <!--
-	         select 属性：根据文章的唯一标识查询文章（即，根据property对象主键的查询方法）
-	         column 属性：从表中的外键
+	         select 属性：从表的外键查询方法
+	         column 属性：从表外键
 	         -->
 	        <collection property="articles" ofType="Article" select="com.mybatis.dao.ArticleDao.findById" column="sid"/>
 	    </resultMap>
@@ -452,8 +453,8 @@ public class Article implements Serializable {
 	        <result property="title" column="title"/>
 	        <result property="sid" column="sid"/>
 	        <!--
-	         select 属性：根据学生的唯一标识查询学生（即，根据property对象主键的查询方法）
-	         column 属性：从表中的外键
+	         select 属性：主表的主键
+	         column 属性：主表主键
 	         -->
 	        <association property="student" javaType="Student" select="com.mybatis.dao.StudentDao.findById" column="sid"/>
 	    </resultMap>
@@ -468,3 +469,52 @@ public class Article implements Serializable {
 	</mapper>
 	```
 	* 解析：就是将原来多表连接操作中t1 join t2 on xxx = yyy变成单独的两次查询t1和t2。然后需要添加两个分别用主键查询t1、t2的方法
+
+## mybatis注解开发
+* 单表CURD
+	* @Select("SQL语句")
+	* @Insert
+	* @Update
+	* @Delete
+* 实体类名与数据库字段名不一致
+	* 在方法上添加@Results，id属性是该映射标识，@Result是每一项映射配置，如果是主键id = true
+	```java
+	@Select("select * from student where sid = #{id}")
+    @Results(id="studentMap", value = {
+            @Result(id = true, property = "id", column = "sid"),
+            @Result(property = "name", column = "sname"),
+            @Result(property = "age", column = "age"),
+            @Result(property = "articles", column = "sid",
+                    many = @Many(select = "com.mybatis.dao.ArticleDao.findBySid", fetchType = FetchType.LAZY))
+    })
+    Student findById(Integer id);
+	```
+	* 之后需要映射只需要标注@ResultMap("映射配置唯一标识")
+	```java
+	@Select("select * from student")
+    @ResultMap("studentMap")
+    List<Student> findAll();
+	```
+* 多表查询
+	* 一对一（FetchType.EAGE立即加载）
+	```java
+	@Result(property = "student", column = "sid",
+                    one = @One(select = "com.mybatis.dao.StudentDao.findById", fetchType = FetchType.EAGER))
+	```
+	* 一对多(其中select是从表根据外键查询的方法，column是外键，FetchType.LAZY为懒加载)
+	```java
+	@Result(property = "articles", column = "sid",
+                    many = @Many(select = "com.mybatis.dao.ArticleDao.findBySid", fetchType = FetchType.LAZY))
+	```
+* 二级缓存（一级默认开启）
+	* 在SqlSessionConfig.xml中配置开启
+	```xml
+	<settings>
+        <setting name="cacheEnabled" value="true"/>
+    </settings>
+	```
+	* 在Dao接口上加注解@CacheNamespace
+	```java
+	@CacheNamespace(blocking = true)
+	public interface ArticleDao {...}
+	```
